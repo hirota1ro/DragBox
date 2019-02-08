@@ -46,6 +46,11 @@ extension FilesViewController {
         super.setEditing(editing, animated: animated)
         tableView.setEditing(editing, animated: animated)
     }
+
+    func remove(at indexPath: IndexPath) {
+        files?.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
 }
 
 // MARK: - Navigation
@@ -129,8 +134,7 @@ extension FilesViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            files?.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            remove(at: indexPath)
         default:
             break
         }
@@ -146,6 +150,17 @@ extension FilesViewController: UITableViewDelegate {
         if let file = files?[indexPath.row] {
             file.editMode = false
         }
+    }
+
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+            completionHandler(true)
+            self.remove(at: indexPath)
+        }
+        let swipeAction = UISwipeActionsConfiguration(actions: [delete])
+        swipeAction.performsFirstActionWithFullSwipe = false
+        return swipeAction
     }
 }
 
