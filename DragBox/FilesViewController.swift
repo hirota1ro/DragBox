@@ -379,10 +379,9 @@ extension FileCell: UITextFieldDelegate {
                 }
             }
         }
-        file?.editMode = false
     }
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        file?.editMode = false
         return true
     }
 }
@@ -393,6 +392,8 @@ extension FileCell: FileObserver {
         field.isHidden = !file.editMode
         if file.editMode {
             field.becomeFirstResponder()
+        } else {
+            field.resignFirstResponder()
         }
     }
 }
