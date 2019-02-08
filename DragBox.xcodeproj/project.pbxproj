@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		740CD50E21E8791700C10056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD50D21E8791700C10056 /* AppDelegate.swift */; };
+		740CD51021E8791700C10056 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD50F21E8791700C10056 /* FilesViewController.swift */; };
+		740CD51321E8791700C10056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740CD51121E8791700C10056 /* Main.storyboard */; };
+		740CD51521E8791900C10056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740CD51421E8791900C10056 /* Assets.xcassets */; };
+		740CD51821E8791900C10056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740CD51621E8791900C10056 /* LaunchScreen.storyboard */; };
+		740CD52E21E87CF100C10056 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD52D21E87CF100C10056 /* ImageViewController.swift */; };
+		740CD53021E87D0E00C10056 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD52F21E87D0E00C10056 /* PdfViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		740CD51F21E8791900C10056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 740CD50221E8791700C10056 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 740CD50921E8791700C10056;
+			remoteInfo = DragBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		740CD50A21E8791700C10056 /* DragBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		740CD50D21E8791700C10056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		740CD50F21E8791700C10056 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		740CD51221E8791700C10056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		740CD51421E8791900C10056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		740CD51721E8791900C10056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		740CD51921E8791900C10056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		740CD51E21E8791900C10056 /* DragBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		740CD52D21E87CF100C10056 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		740CD52F21E87D0E00C10056 /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		740CD50721E8791700C10056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740CD51B21E8791900C10056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		740CD50121E8791700C10056 = {
+			isa = PBXGroup;
+			children = (
+				740CD50C21E8791700C10056 /* DragBox */,
+				740CD50B21E8791700C10056 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		740CD50B21E8791700C10056 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				740CD50A21E8791700C10056 /* DragBox.app */,
+				740CD51E21E8791900C10056 /* DragBoxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		740CD50C21E8791700C10056 /* DragBox */ = {
+			isa = PBXGroup;
+			children = (
+				740CD50D21E8791700C10056 /* AppDelegate.swift */,
+				740CD51421E8791900C10056 /* Assets.xcassets */,
+				740CD50F21E8791700C10056 /* FilesViewController.swift */,
+				740CD52D21E87CF100C10056 /* ImageViewController.swift */,
+				740CD51921E8791900C10056 /* Info.plist */,
+				740CD51621E8791900C10056 /* LaunchScreen.storyboard */,
+				740CD51121E8791700C10056 /* Main.storyboard */,
+				740CD52F21E87D0E00C10056 /* PdfViewController.swift */,
+			);
+			path = DragBox;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		740CD50921E8791700C10056 /* DragBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 740CD52721E8791900C10056 /* Build configuration list for PBXNativeTarget "DragBox" */;
+			buildPhases = (
+				740CD50621E8791700C10056 /* Sources */,
+				740CD50721E8791700C10056 /* Frameworks */,
+				740CD50821E8791700C10056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragBox;
+			productName = DragBox;
+			productReference = 740CD50A21E8791700C10056 /* DragBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		740CD51D21E8791900C10056 /* DragBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 740CD52A21E8791900C10056 /* Build configuration list for PBXNativeTarget "DragBoxTests" */;
+			buildPhases = (
+				740CD51A21E8791900C10056 /* Sources */,
+				740CD51B21E8791900C10056 /* Frameworks */,
+				740CD51C21E8791900C10056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				740CD52021E8791900C10056 /* PBXTargetDependency */,
+			);
+			name = DragBoxTests;
+			productName = DragBoxTests;
+			productReference = 740CD51E21E8791900C10056 /* DragBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		740CD50221E8791700C10056 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "HIROTA Ichiro";
+				TargetAttributes = {
+					740CD50921E8791700C10056 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					740CD51D21E8791900C10056 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 740CD50921E8791700C10056;
+					};
+				};
+			};
+			buildConfigurationList = 740CD50521E8791700C10056 /* Build configuration list for PBXProject "DragBox" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 740CD50121E8791700C10056;
+			productRefGroup = 740CD50B21E8791700C10056 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				740CD50921E8791700C10056 /* DragBox */,
+				740CD51D21E8791900C10056 /* DragBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		740CD50821E8791700C10056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740CD51821E8791900C10056 /* LaunchScreen.storyboard in Resources */,
+				740CD51521E8791900C10056 /* Assets.xcassets in Resources */,
+				740CD51321E8791700C10056 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740CD51C21E8791900C10056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		740CD50621E8791700C10056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740CD51021E8791700C10056 /* FilesViewController.swift in Sources */,
+				740CD52E21E87CF100C10056 /* ImageViewController.swift in Sources */,
+				740CD50E21E8791700C10056 /* AppDelegate.swift in Sources */,
+				740CD53021E87D0E00C10056 /* PdfViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		740CD51A21E8791900C10056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		740CD52021E8791900C10056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 740CD50921E8791700C10056 /* DragBox */;
+			targetProxy = 740CD51F21E8791900C10056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		740CD51121E8791700C10056 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				740CD51221E8791700C10056 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		740CD51621E8791900C10056 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				740CD51721E8791900C10056 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		740CD52521E8791900C10056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		740CD52621E8791900C10056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		740CD52821E8791900C10056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		740CD52921E8791900C10056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		740CD52B21E8791900C10056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragBox.app/DragBox";
+			};
+			name = Debug;
+		};
+		740CD52C21E8791900C10056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragBox.app/DragBox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		740CD50521E8791700C10056 /* Build configuration list for PBXProject "DragBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740CD52521E8791900C10056 /* Debug */,
+				740CD52621E8791900C10056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		740CD52721E8791900C10056 /* Build configuration list for PBXNativeTarget "DragBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740CD52821E8791900C10056 /* Debug */,
+				740CD52921E8791900C10056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		740CD52A21E8791900C10056 /* Build configuration list for PBXNativeTarget "DragBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740CD52B21E8791900C10056 /* Debug */,
+				740CD52C21E8791900C10056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 740CD50221E8791700C10056 /* Project object */;
+}
