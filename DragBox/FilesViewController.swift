@@ -11,12 +11,11 @@ import PDFKit
 import MobileCoreServices
 
 class FilesViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
-
     var files: Files?
+}
 
-    var postProcess: (()->Void)?
+extension FilesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,23 +36,9 @@ class FilesViewController: UIViewController {
         }
     }
 
-    let mimeMap: [String: String] = [
-      "image/png": "image",
-      "image/jpeg": "image",
-      "application/pdf": "pdf",
-    ]
-
-    func loadContents() -> [URL]? {
-        guard let docURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
-        }
-        return try? FileManager.default.contentsOfDirectory(at: docURL, includingPropertiesForKeys: nil)
-    }
-
     @objc func refreshAction(_ sender: UIRefreshControl) {
-        postProcess = { sender.endRefreshing() }
         DispatchQueue.global(qos: .background).async {
-            self.files?.reload()
+            self.files?.reload() { sender.endRefreshing() }
         }
     }
 
@@ -118,11 +103,17 @@ extension FilesViewController: UITableViewDataSource {
         return cell
     }
 
+    static let mimeToCellType: [String: String] = [
+      "image/png": "image",
+      "image/jpeg": "image",
+      "application/pdf": "pdf",
+    ]
+
     private func cellType(mimeType: String?) -> String? {
         guard let mime = mimeType else {
             return nil
         }
-        guard let cid = mimeMap[mime] else {
+        guard let cid = FilesViewController.mimeToCellType[mime] else {
             return nil
         }
         return cid
@@ -271,7 +262,7 @@ class Files {
     var count: Int { return files?.count ?? 0 }
     subscript(i: Int) -> File { return files![i] }
 
-    func reload() {
+    func reload(completion: (()->Void)? = nil) {
         files = try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil).map { (url) -> File in
             return File(name: url.lastPathComponent, owner: self)
         }
@@ -280,7 +271,7 @@ class Files {
                 file.createThumbImage()
             }
         }
-        observer?.reloaded(files: self)
+        observer?.reloaded(files: self, completion: completion)
     }
 
     func uniqURL(name: String) -> URL {
@@ -319,16 +310,15 @@ extension Files: FileOwner {
 }
 
 protocol FilesObserver: AnyObject {
-    func reloaded(files: Files)
+    func reloaded(files: Files, completion: (()->Void)?)
     func updated(files: Files, at index: Int)
 }
 
 extension FilesViewController: FilesObserver {
-    func reloaded(files: Files) {
+    func reloaded(files: Files, completion: (()->Void)?) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            self.postProcess?()
-            self.postProcess = nil
+            completion?()
         }
     }
     func updated(files: Files, at index: Int) {
