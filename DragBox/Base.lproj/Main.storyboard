@@ -53,7 +53,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHv-e2-FTI">
-                                                    <rect key="frame" x="63" y="5" width="271" height="21"/>
+                                                    <rect key="frame" x="63" y="5" width="241" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="fPF-cQ-fv4"/>
                                                     </constraints>
@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wBM-hL-XyV">
-                                                    <rect key="frame" x="63" y="5" width="271" height="30"/>
+                                                    <rect key="frame" x="63" y="5" width="241" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -79,16 +79,42 @@
                                                         <outlet property="delegate" destination="OFk-Hv-V8D" id="oxO-75-QIC"/>
                                                     </connections>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-Mt-ZSH">
+                                                    <rect key="frame" x="312" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="B7V-4v-SKj"/>
+                                                        <constraint firstAttribute="height" constant="30" id="SjM-VR-qf4"/>
+                                                    </constraints>
+                                                    <state key="normal" title="✎"/>
+                                                    <connections>
+                                                        <action selector="tapEditButton:" destination="OFk-Hv-V8D" eventType="touchUpInside" id="box-cY-OL6"/>
+                                                    </connections>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAu-2N-Ej5">
+                                                    <rect key="frame" x="312" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="5dz-im-foj"/>
+                                                        <constraint firstAttribute="width" constant="30" id="7G6-6S-H3M"/>
+                                                    </constraints>
+                                                    <state key="normal" title="✓"/>
+                                                    <connections>
+                                                        <action selector="tapDoneButton:" destination="OFk-Hv-V8D" eventType="touchUpInside" id="QIn-5F-Meh"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ZAu-2N-Ej5" secondAttribute="trailing" id="6fJ-jY-cgl"/>
                                                 <constraint firstItem="H8z-Yv-x5i" firstAttribute="leading" secondItem="UtZ-Za-Zs9" secondAttribute="leadingMargin" id="9Bb-iH-H0J"/>
                                                 <constraint firstItem="AHv-e2-FTI" firstAttribute="leading" secondItem="H8z-Yv-x5i" secondAttribute="trailing" constant="8" id="FT9-z9-TgT"/>
                                                 <constraint firstItem="H8z-Yv-x5i" firstAttribute="top" secondItem="AHv-e2-FTI" secondAttribute="top" id="FvJ-d4-VTB"/>
                                                 <constraint firstItem="H8z-Yv-x5i" firstAttribute="centerY" secondItem="UtZ-Za-Zs9" secondAttribute="centerY" id="HI0-1g-iso"/>
-                                                <constraint firstAttribute="trailing" secondItem="AHv-e2-FTI" secondAttribute="trailing" constant="8" id="Qz3-mH-vtq"/>
+                                                <constraint firstItem="vdw-Mt-ZSH" firstAttribute="leading" secondItem="AHv-e2-FTI" secondAttribute="trailing" constant="8" id="Qz3-mH-vtq"/>
                                                 <constraint firstItem="wBM-hL-XyV" firstAttribute="leading" secondItem="H8z-Yv-x5i" secondAttribute="trailing" constant="8" id="Sof-Zu-HDB"/>
+                                                <constraint firstAttribute="trailing" secondItem="vdw-Mt-ZSH" secondAttribute="trailing" id="dCc-Is-fxy"/>
                                                 <constraint firstItem="wBM-hL-XyV" firstAttribute="top" secondItem="H8z-Yv-x5i" secondAttribute="top" id="dXN-dE-dU3"/>
-                                                <constraint firstAttribute="trailing" secondItem="wBM-hL-XyV" secondAttribute="trailing" constant="8" id="pSf-0k-kAk"/>
+                                                <constraint firstItem="vdw-Mt-ZSH" firstAttribute="leading" secondItem="wBM-hL-XyV" secondAttribute="trailing" constant="8" id="hrN-GW-ukq"/>
+                                                <constraint firstItem="vdw-Mt-ZSH" firstAttribute="centerY" secondItem="UtZ-Za-Zs9" secondAttribute="centerY" id="okI-Pi-CFO"/>
+                                                <constraint firstItem="ZAu-2N-Ej5" firstAttribute="centerY" secondItem="UtZ-Za-Zs9" secondAttribute="centerY" id="tuO-kO-AVk"/>
                                                 <constraint firstItem="Bvz-1V-eec" firstAttribute="leading" secondItem="H8z-Yv-x5i" secondAttribute="trailing" constant="8" id="uBk-tP-RvK"/>
                                                 <constraint firstAttribute="trailing" secondItem="Bvz-1V-eec" secondAttribute="trailing" constant="8" id="w50-Gp-Cso"/>
                                                 <constraint firstItem="H8z-Yv-x5i" firstAttribute="bottom" secondItem="Bvz-1V-eec" secondAttribute="bottom" id="zL2-h0-RoM"/>
@@ -96,6 +122,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="detail" destination="Bvz-1V-eec" id="h7L-6l-h5I"/>
+                                            <outlet property="doneButton" destination="ZAu-2N-Ej5" id="ABy-ga-4wO"/>
+                                            <outlet property="editButton" destination="vdw-Mt-ZSH" id="JmQ-2d-z9V"/>
                                             <outlet property="field" destination="wBM-hL-XyV" id="0FN-Ie-bdU"/>
                                             <outlet property="label" destination="AHv-e2-FTI" id="jJz-OW-gdK"/>
                                             <outlet property="thumb" destination="H8z-Yv-x5i" id="2hM-gy-KDq"/>

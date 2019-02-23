@@ -147,12 +147,6 @@ extension FilesViewController: UITableViewDelegate {
         }
     }
 
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // if let file = files?[indexPath.row] {
-        //     file.editMode = !file.editMode
-        // }
-    }
-
     public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let file = files?[indexPath.row] {
             file.editMode = false
@@ -355,6 +349,8 @@ class FileCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var field: UITextField!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
 
     var file: File? {
         didSet {
@@ -385,6 +381,13 @@ class FileCell: UITableViewCell {
         detail.text = "\(timestamp) \(bytesize)"
         thumb.image = file.thumbImage
     }
+
+    @IBAction func tapEditButton(_ sender: UIButton) {
+        file?.editMode = true
+    }
+    @IBAction func tapDoneButton(_ sender: UIButton) {
+        file?.editMode = false
+    }
 }
 
 extension FileCell: UITextFieldDelegate {
@@ -411,7 +414,9 @@ extension FileCell: UITextFieldDelegate {
 extension FileCell: FileObserver {
     func editModeChanged(file: File) {
         label.isHidden = file.editMode
+        editButton.isHidden = file.editMode
         field.isHidden = !file.editMode
+        doneButton.isHidden = !file.editMode
         if file.editMode {
             field.becomeFirstResponder()
         } else {
