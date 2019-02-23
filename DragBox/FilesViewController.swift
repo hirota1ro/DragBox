@@ -51,6 +51,13 @@ extension FilesViewController {
         files?.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: animated)
+        }
+    }
 }
 
 // MARK: - Navigation
@@ -141,9 +148,9 @@ extension FilesViewController: UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let file = files?[indexPath.row] {
-            file.editMode = !file.editMode
-        }
+        // if let file = files?[indexPath.row] {
+        //     file.editMode = !file.editMode
+        // }
     }
 
     public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
