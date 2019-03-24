@@ -173,11 +173,12 @@ extension FilesViewController {
         do {
             try FileManager.default.moveItem(at: inputURL, to: dstURL)
             print("\(#function) succeeded from=\(inputURL) to=\(dstURL)")
-            return true
         } catch let error {
             print("\(#function) error=\(error)")
             return false
         }
+        files?.add(name: dstURL.lastPathComponent)
+        return true
     }
 }
 
@@ -312,6 +313,14 @@ class Files {
             file.remove()
         }
     }
+
+    func add(name: String) {
+        if files != nil {
+            let index = files!.count
+            files!.append(File(name: name, owner: self))
+            observer?.added(files: self, at: index)
+        }
+    }
 }
 extension Files: FileOwner {
     func content(for name: String) -> URL {
@@ -328,6 +337,7 @@ extension Files: FileOwner {
 protocol FilesObserver: AnyObject {
     func reloaded(files: Files, completion: (()->Void)?)
     func updated(files: Files, at index: Int)
+    func added(files: Files, at index: Int)
 }
 
 extension FilesViewController: FilesObserver {
@@ -340,6 +350,11 @@ extension FilesViewController: FilesObserver {
     func updated(files: Files, at index: Int) {
         DispatchQueue.main.async {
             self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+        }
+    }
+    func added(files: Files, at index: Int) {
+        DispatchQueue.main.async {
+            self.tableView.insertRows(at: [IndexPath(row: index, section: 0)], with: .fade)
         }
     }
 }
