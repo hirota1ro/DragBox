@@ -16,16 +16,6 @@
 		740CD53021E87D0E00C10056 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD52F21E87D0E00C10056 /* PdfViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		740CD51F21E8791900C10056 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 740CD50221E8791700C10056 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 740CD50921E8791700C10056;
-			remoteInfo = DragBox;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		740CD50A21E8791700C10056 /* DragBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		740CD50D21E8791700C10056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,20 +24,12 @@
 		740CD51421E8791900C10056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		740CD51721E8791900C10056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		740CD51921E8791900C10056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		740CD51E21E8791900C10056 /* DragBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		740CD52D21E87CF100C10056 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		740CD52F21E87D0E00C10056 /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		740CD50721E8791700C10056 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		740CD51B21E8791900C10056 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				740CD50A21E8791700C10056 /* DragBox.app */,
-				740CD51E21E8791900C10056 /* DragBoxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,24 +90,6 @@
 			productReference = 740CD50A21E8791700C10056 /* DragBox.app */;
 			productType = "com.apple.product-type.application";
 		};
-		740CD51D21E8791900C10056 /* DragBoxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 740CD52A21E8791900C10056 /* Build configuration list for PBXNativeTarget "DragBoxTests" */;
-			buildPhases = (
-				740CD51A21E8791900C10056 /* Sources */,
-				740CD51B21E8791900C10056 /* Frameworks */,
-				740CD51C21E8791900C10056 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				740CD52021E8791900C10056 /* PBXTargetDependency */,
-			);
-			name = DragBoxTests;
-			productName = DragBoxTests;
-			productReference = 740CD51E21E8791900C10056 /* DragBoxTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -139,10 +102,7 @@
 				TargetAttributes = {
 					740CD50921E8791700C10056 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					740CD51D21E8791900C10056 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 740CD50921E8791700C10056;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -160,7 +120,6 @@
 			projectRoot = "";
 			targets = (
 				740CD50921E8791700C10056 /* DragBox */,
-				740CD51D21E8791900C10056 /* DragBoxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -173,13 +132,6 @@
 				740CD51821E8791900C10056 /* LaunchScreen.storyboard in Resources */,
 				740CD51521E8791900C10056 /* Assets.xcassets in Resources */,
 				740CD51321E8791700C10056 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		740CD51C21E8791900C10056 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,22 +149,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		740CD51A21E8791900C10056 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		740CD52021E8791900C10056 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 740CD50921E8791700C10056 /* DragBox */;
-			targetProxy = 740CD51F21E8791900C10056 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		740CD51121E8791700C10056 /* Main.storyboard */ = {
@@ -362,7 +299,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -379,48 +316,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		740CD52B21E8791900C10056 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DragBoxTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBoxTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragBox.app/DragBox";
-			};
-			name = Debug;
-		};
-		740CD52C21E8791900C10056 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DragBoxTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.DragBoxTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragBox.app/DragBox";
 			};
 			name = Release;
 		};
@@ -441,15 +338,6 @@
 			buildConfigurations = (
 				740CD52821E8791900C10056 /* Debug */,
 				740CD52921E8791900C10056 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		740CD52A21E8791900C10056 /* Build configuration list for PBXNativeTarget "DragBoxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				740CD52B21E8791900C10056 /* Debug */,
-				740CD52C21E8791900C10056 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
