@@ -65,6 +65,15 @@ extension FilesViewController {
 extension FilesViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "binary" {
+            if let cell = sender as? UITableViewCell,
+               let indexPath = tableView.indexPath(for: cell),
+               let file = files?[indexPath.row],
+               let imgVC = segue.destination as? BinaryViewController {
+                imgVC.url = file.url
+                imgVC.navigationItem.title = file.name
+            }
+        }
         if segue.identifier == "image" {
             if let cell = sender as? UITableViewCell,
                let indexPath = tableView.indexPath(for: cell),

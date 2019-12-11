@@ -14,6 +14,7 @@
 		740CD51821E8791900C10056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740CD51621E8791900C10056 /* LaunchScreen.storyboard */; };
 		740CD52E21E87CF100C10056 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD52D21E87CF100C10056 /* ImageViewController.swift */; };
 		740CD53021E87D0E00C10056 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD52F21E87D0E00C10056 /* PdfViewController.swift */; };
+		74E95318239F705A0016C3F9 /* BinaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E95317239F705A0016C3F9 /* BinaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		740CD51921E8791900C10056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		740CD52D21E87CF100C10056 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		740CD52F21E87D0E00C10056 /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
+		74E95317239F705A0016C3F9 /* BinaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				740CD50D21E8791700C10056 /* AppDelegate.swift */,
 				740CD51421E8791900C10056 /* Assets.xcassets */,
+				74E95317239F705A0016C3F9 /* BinaryViewController.swift */,
 				740CD50F21E8791700C10056 /* FilesViewController.swift */,
 				740CD52D21E87CF100C10056 /* ImageViewController.swift */,
 				740CD51921E8791900C10056 /* Info.plist */,
@@ -145,6 +148,7 @@
 				740CD51021E8791700C10056 /* FilesViewController.swift in Sources */,
 				740CD52E21E87CF100C10056 /* ImageViewController.swift in Sources */,
 				740CD50E21E8791700C10056 /* AppDelegate.swift in Sources */,
+				74E95318239F705A0016C3F9 /* BinaryViewController.swift in Sources */,
 				740CD53021E87D0E00C10056 /* PdfViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
